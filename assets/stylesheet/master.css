@@ -1,0 +1,248 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+:root{
+    --favcolor : rgb(72, 37, 2);
+    --blackcolor : rgb(27, 27, 27);
+}
+header{
+position: relative;
+>div{
+    &:nth-of-type(1){
+        background-color: var(--favcolor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 10px 0;
+        >p{
+            color: whitesmoke;
+            word-spacing: 3px;
+        }
+    }
+    &:nth-of-type(2){
+        position: relative;
+        background-color: bisque;
+        width: 100%;
+        height: 100px;
+        padding: 0 5%;
+        >figure{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >img{
+                width: 60%;
+            }
+        }
+        >nav{
+            /* border: 1px solid red; */
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >ul{
+                display: flex;
+                gap: 30px;
+                height: 100%;
+                >li{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 2px solid transparent;
+                    &:nth-of-type(1){
+                        border-bottom: 2px solid black;
+                    }
+                    &:nth-of-type(2){
+                        &:hover{
+                            >ul{
+                                opacity: 1;
+                                visibility: visible;
+                                
+                            }
+                            
+                        }
+                        >ul{
+                            position: absolute;
+                            width: 100%;
+                            top: 100%;
+                            left: 0;
+                            background-color: white;
+                            padding: 30px 50px;
+                            display: flex;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: .4s;
+                            z-index: 99;
+                            >li{
+                                width: 30%;
+                                &:nth-of-type(1){
+                                    >h4{
+                                        padding-top: 50px;
+                                        color: gray;
+                                        font-size: 20px;
+                                        font-weight: 400px;
+
+                                    }
+                                    >ul{
+                                        padding: 20px 0;
+                                        color: gray;
+                                        font-size: 40px;
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    width: 70%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    >figure{
+                                        width: 30%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        position: relative;
+                                        &:hover{
+                                            &::after{
+                                                opacity: 1;
+                                            }
+                                        }
+                                        &::after{
+                                            content: '';
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 90%;
+                                            background-color: rgba(187, 187, 187, 0.37);
+                                            opacity: 0;
+                                            transition: .4s;
+                                        }
+                                        >img{
+                                            width: 100%;
+                                            height: 90%;
+                                            object-fit: cover;
+                                        }
+                                        >figcaption{
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        border-bottom: 2px solid black;
+                    }
+
+                }
+
+            }
+        }
+        >div{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            >div{
+                &:nth-of-type(1){
+                    background-color: rgba(255, 255, 255, 0.37);
+                    height: 50%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    gap: 10px;
+                    >i{
+                        font-size: 20px;
+
+                    }
+                    >input{
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                &:nth-of-type(2){
+                    display: flex;
+                    gap: 7px;
+                    align-items: center;
+                    >i{
+                        font-size: 25px;
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+}
+section{
+    background-image: url(../images/imgi_77_hero-intro-1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    >div{
+        >h4{
+            color: white;
+            font-size: 20px;
+            font-weight: 500px;
+            letter-spacing: 3px;
+            margin-top: 200px;
+            text-align: center;
+        }
+        >h3{
+            font-size: 70px;
+            color: white;
+            font-weight: 300;
+            width: 700px;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+        >a{
+            background-color: white;
+            display: block;
+            width: fit-content;
+            margin: auto;
+            margin-top: 30px;
+            color: black;
+            padding: 20px 120px;
+            font-size: 20px;
+            position: relative;
+            z-index: 6;
+            overflow: hidden;
+            &:hover{
+                &::before{
+                   transform: rotate(30deg) translate(500px)
+                }
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 500px;
+                height: 400px;
+                background-color: rgba(165, 42, 42, 0.363);
+                bottom: 100%;
+                left: -100%;
+                z-index: -1;
+                transform: rotate(30deg);
+                transition: .7s;
+
+            }
+
+        }
+    }
+}
+.txtfooter{
+            width: 100%;
+            background-color: rgba(165, 42, 42, 0.633);
+            padding: 20px 0;
+            >p{
+                color: rgba(255, 255, 255, 0.541);
+                text-transform: capitalize;
+                text-align: center;
+            }
+ }
