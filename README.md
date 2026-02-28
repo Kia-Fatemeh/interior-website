@@ -1,2 +1,2 @@
 # interior-website
-Fr ist page of an interior design website
+Frist page of an interior design website
